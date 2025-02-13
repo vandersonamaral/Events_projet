@@ -7,6 +7,7 @@ body {
   min-height: 100vh;
   padding-bottom: 100px;
   position: relative;
+  background-color: #F1F1F1; /* Cinza Claro para o fundo */
 }
 
 header {
@@ -23,19 +24,20 @@ header {
 }
 
 .btn-primary {
-  background-color: #F2A340;
-  border: 2px solid #C28008;
+  background-color: #E74C3C; /* Laranja para botões primários */
+  border: 2px solid #E74C3C;
+  color: #FFF;
 }
 
 .btn-primary:hover {
-  background-color: #C28008;
-  border-color: #C28008;
+  background-color: #E74C3C; /* Laranja mais escuro para hover */
+  border-color: #E74C3C;
 }
 
 .msg {
-  background-color: #D4EDDA;
+  background-color: #A8DF8E; /* Verde Claro para mensagens de sucesso */
   color: #155724;
-  border: 1px solid #C3E6CB;
+  border: 1px solid #A8DF8E;
   width: 100%;
   margin-bottom: 0;
   text-align: center;
@@ -45,8 +47,8 @@ header {
 #info-container .already-joined-msg {
   margin: 15px 0;
   color: #004085;
-  background-color: #CCE5FF;
-  border: 1px solid #B8DAFF;
+  background-color: #6C9BCF; /* Azul Claro para mensagens informativas */
+  border: 1px solid #6C9BCF;
   padding: 10px;
   width: 275px;
 }
@@ -64,11 +66,11 @@ header {
 
 #navbar a {
   font-size: 14px;
-  color: #757575;
+  color: #333333; /* Cinza Escuro para links */
 }
 
 #navbar a:hover {
-  color: #F2A340;
+  color: #FFA559; /* Laranja para hover dos links */
 }
 
 /* Search Container */
@@ -76,13 +78,13 @@ header {
   background-image: url("../img/banner.jpg");
   background-size: cover;
   background-position: center;
-  height: 400px;
-  padding: 50px;
+  height: 500px;
+  padding: 60px;
   text-align: center;
 }
 
 #search-container h1 {
-  color: #F2A340;
+  color: #FFF;
   margin-bottom: 30px;
   font-weight: 900;
 }
@@ -99,6 +101,7 @@ header {
 
 #events-container h2 {
   margin-bottom: 10px;
+  color: #2E4374; /* Azul Escuro para títulos */
 }
 
 #events-container .subtitle {
@@ -116,6 +119,7 @@ header {
   border-radius: 10px;
   padding: 0;
   margin: .5%;
+  background-color: #FFF;
 }
 
 #events-container img {
@@ -126,11 +130,11 @@ header {
 
 .card .card-date {
   font-size: 12px;
-  color: #CCC;
+  color: #757575;
 }
 
 .card .card-title {
-  color: #212121;
+  color: #2E4374; /* Azul Escuro para títulos de cartões */
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -148,6 +152,7 @@ header {
 
 #event-create-container label {
   font-weight: bold;
+  color: #2E4374; /* Azul Escuro para labels */
 }
 
 #event-create-container input,
@@ -169,6 +174,7 @@ header {
 #info-container h1 {
   font-size: 36px;
   font-weight: 900;
+  color: #2E4374; /* Azul Escuro para títulos */
 }
 
 #info-container p {
@@ -181,11 +187,12 @@ header {
 #description-container h3 {
   font-size: 20px;
   font-weight: bold;
+  color: #2E4374; /* Azul Escuro para subtítulos */
 }
 
 #info-container ion-icon {
   font-size: 20px;
-  color: #F2A340;
+  color: #FFA559; /* Laranja para ícones */
   margin-right: 5px;
 }
 
@@ -230,7 +237,7 @@ header {
 /* footer */
 footer {
   text-align: center;
-  background-color: #353E48;
+  background-color: #2E4374; /* Azul Escuro para o rodapé */
   color: #FFF;
   padding: 30px;
   position: absolute;
