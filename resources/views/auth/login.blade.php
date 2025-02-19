@@ -1,8 +1,12 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
         </x-slot>
+
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-900">Bem-vindo de volta!</h2>
+            <p class="mt-2 text-sm text-gray-600">Entre para gerenciar seus eventos</p>
+        </div>
 
         <x-jet-validation-errors class="mb-4" />
 
@@ -12,36 +16,59 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login') }}" class="space-y-6">
             @csrf
 
             <div>
-                <x-jet-label value="{{ __('Email') }}" />
-                <x-jet-input class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-label for="email" value="E-mail" class="block text-sm font-medium text-gray-700" />
+                <div class="mt-1">
+                    <x-jet-input id="email" type="email" name="email" :value="old('email')" required autofocus
+                        class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none sm:text-sm"
+                        placeholder="seu@email.com" />
+                </div>
             </div>
 
-            <div class="mt-4">
-                <x-jet-label value="{{ __('Password') }}" />
-                <x-jet-input class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+            <div>
+                <x-jet-label for="password" value="Senha" class="block text-sm font-medium text-gray-700" />
+                <div class="mt-1">
+                    <x-jet-input id="password" type="password" name="password" required autocomplete="current-password"
+                        class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none sm:text-sm"
+                        placeholder="••••••••" />
+                </div>
             </div>
 
-            <div class="block mt-4">
-                <label class="flex items-center">
-                    <input type="checkbox" class="form-checkbox" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <input id="remember" name="remember" type="checkbox"
+                        class="h-4 w-4 text-orange-500 border-gray-300 rounded">
+                    <label for="remember" class="ml-2 block text-sm text-gray-700">
+                        Lembrar-me
+                    </label>
+                </div>
 
-            <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
+                    <div class="text-sm">
+                        <a href="{{ route('password.request') }}" class="font-medium text-orange-500 hover:text-orange-600">
+                            Esqueceu sua senha?
+                        </a>
+                    </div>
                 @endif
+            </div>
 
-                <x-jet-button class="ml-4">
-                    {{ __('Login') }}
-                </x-jet-button>
+            <div>
+                <button type="submit"
+                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-200">
+                    Entrar
+                </button>
+            </div>
+
+            <div class="text-center">
+                <p class="text-sm text-gray-600">
+                    Não tem uma conta? 
+                    <a href="{{ route('register') }}" class="font-medium text-orange-500 hover:text-orange-600">
+                        Cadastre-se
+                    </a>
+                </p>
             </div>
         </form>
     </x-jet-authentication-card>
