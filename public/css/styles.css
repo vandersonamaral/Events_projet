@@ -70,7 +70,7 @@ header {
 }
 
 #navbar a:hover {
-  color: #FFA559; /* Laranja para hover dos links */
+  color: #FFB07F; /* Laranja claro para hover dos links */
 }
 
 /* Search Container */
@@ -237,9 +237,9 @@ header {
 /* footer */
 footer {
   text-align: center;
-  background-color: #2E4374; /* Azul Escuro para o rodapé */
+  background-color: #6C9BCF; /* Azul claro suave para o rodapé */
   color: #FFF;
-  padding: 30px;
+  padding: 20px;
   position: absolute;
   bottom: 0;
   width: 100%;
